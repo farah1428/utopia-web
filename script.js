@@ -1,13 +1,11 @@
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
+function toggleMenu() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('active');
+  document.body.classList.toggle('menu-open');
 }
 
-setInterval(createHeart, 500);
+function toggleDropdown(event) {
+  event.preventDefault();
+  const dropdown = event.target.nextElementSibling;
+  dropdown.classList.toggle('show');
+}
