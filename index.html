@@ -2,43 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Utopia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<script src="script.js"></script>
 <body>
-  <!-- Hamburger icon -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- Sidebar menu -->
-  <nav class="sidebar" id="sidebar">
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <nav class="sidebar" id="sidebarMenu">
     <ul>
       <li><a href="#">Home</a></li>
-      <li class="dropdown">
-        <a href="#" onclick="toggleDropdown(event)">Jewelry ▾</a>
-        <ul class="dropdown-menu">
+
+      <li>
+        <a href="#" onclick="toggleDropdown('jewelryDropdown')">Jewelry ▾</a>
+        <ul class="dropdown-menu" id="jewelryDropdown">
           <li><a href="#">Necklaces</a></li>
           <li><a href="#">Rings</a></li>
           <li><a href="#">Earrings</a></li>
           <li><a href="#">Bracelets</a></li>
         </ul>
       </li>
-      <li><a href="#">Contact</a></li>
+
+      <li>
+        <a href="#" onclick="toggleDropdown('contactDropdown')">Contact ▾</a>
+        <ul class="dropdown-menu" id="contactDropdown">
+          <li><a href="https://www.instagram.com/utopia_eg1" target="_blank">📸 Instagram</a></li>
+          <li><a href="mailto:utopiaeg007@gmail.com">💌 Email</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
+  <!-- Top Right Icons -->
+  <div class="top-right">
+    <input type="text" placeholder="Search..." class="search-box" />
+    <a href="#" class="cart-icon">🛒</a>
+  </div>
+
+  <!-- Main Content -->
   <header>
     <h1>Welcome to Utopia 🌸</h1>
   </header>
+
   <main>
     <p>Your dreamy, pastel space on the web!</p>
-    <p id="message"></p>
   </main>
 
   <footer>
     <p>&copy; 2025 Utopia</p>
   </footer>
 
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>

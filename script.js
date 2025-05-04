@@ -1,11 +1,11 @@
+// Toggle the sidebar menu
 function toggleMenu() {
-  const sidebar = document.getElementById('sidebar');
+  const sidebar = document.getElementById('sidebarMenu');
   sidebar.classList.toggle('active');
-  document.body.classList.toggle('menu-open');
 }
 
-function toggleDropdown(event) {
-  event.preventDefault();
-  const dropdown = event.target.nextElementSibling;
+// Toggle dropdown menus
+function toggleDropdown(id) {
+  const dropdown = document.getElementById(id);
   dropdown.classList.toggle('show');
 }
